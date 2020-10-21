@@ -20,12 +20,32 @@ const routes: Routes = [
     loadChildren: () => import('./pages/bateau/bateau.module').then( m => m.BateauPageModule)
   },
   {
+  path: 'bateau/:id',
+  loadChildren: () => import('./pages/bateau/bateau.module').then( m => m.BateauPageModule)
+  },
+  {
     path: 'recette',
+    loadChildren: () => import('./pages/recette/recette.module').then( m => m.RecettePageModule)
+  },
+  {
+    path: 'recette/:id',
     loadChildren: () => import('./pages/recette/recette.module').then( m => m.RecettePageModule)
   },
   {
     path: 'restaurant',
     loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
+  {
+    path: 'restaurant/:id',
+    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
+  },
+  {
+    path: 'products/:id',
+    loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
   },
 ];
 
