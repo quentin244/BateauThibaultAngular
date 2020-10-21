@@ -6,15 +6,47 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content  class="bgImage">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">a</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+
+    <div id="title">
+     <strong>Je suis le titre</strong>
+    </div>
+    <div id="main">
+     <strong>Je suis le contenu</strong>
+    </div>
+      <div id="button">
+        <ion-button id="productButton" expand="block" (click)="toNavigate('products')">
+          <ion-img src="../assets/poisson.png" class="imgButton"></ion-img>
+          <ion-text class="txtButton">Produits et promotions</ion-text>
+        </ion-button>   
+      </div>
+      <ion-row id="button">
+        <ion-button class="myButton" (click)="toNavigate('bateau')">
+          <ion-img src="../assets/ancre.png" class="imgButton"></ion-img>
+          <ion-text class="txtButton">Bateaux</ion-text>
+        </ion-button>
+        <ion-button class="myButton" (click)="toNavigate('restaurant')">
+          <ion-img src="../assets/restaurant.png" class="imgButton"></ion-img>
+          <ion-text class="txtButton">Restaurants</ion-text>
+        </ion-button>
+      </ion-row>
+      <ion-row id="button">
+        <ion-button class="myButton" (click)="toNavigate('recette')">
+          <ion-img src="../assets/recette.png" class="imgButton"></ion-img>
+          <ion-text class="txtButton">Recettes</ion-text>
+        </ion-button>
+        <ion-button class="myButton" (click)="toNavigate('contact')">
+          <ion-img src="../assets/poulpe.png" class="imgButton"></ion-img>
+          <ion-text class="txtButton">Contact</ion-text>
+        </ion-button>
+      </ion-row>
+    </div>
 </ion-content>
