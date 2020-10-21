@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>bateau</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of bateaux">
+      <ion-item (click)="onBateauClick(item)">
+        <ion-button>{{item.name}}</ion-button>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>  
+</ion-content>

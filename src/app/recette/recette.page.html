@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recette</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of recettes">
+      <ion-item (click)="onRecetteClick(item)">
+        <ion-button>{{item.name}}</ion-button>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>  
+</ion-content>
+
