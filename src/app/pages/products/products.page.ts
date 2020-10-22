@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.page.scss'],
 })
 export class ProductsPage implements OnInit {
-  public products;
+  public category = [{"name":"Poisson", "id":0},{"name":"Coquillage", "id":1},{"name":"Crustace", "id":2},{"name":"Promotion", "id":3}];
 
   constructor(
     private productService: ProductService,
@@ -18,16 +18,11 @@ export class ProductsPage implements OnInit {
 
 
   ngOnInit() {
-    this.productService.getProducts()
-    .subscribe(
-      (resp)=>{
-        this.products = resp
-      }
-    );
+
   }
 
   onProductClick(item): void {
     console.log(item);
-    this.router.navigate(['/', 'products', item.id]);
+    this.router.navigate(['/', 'product-list', item.id]);
   }
 }

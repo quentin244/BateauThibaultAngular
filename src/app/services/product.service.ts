@@ -12,4 +12,5 @@ export class ProductService {
         //return this.http.get(`https://us-central1-projetbateau-d52df.cloudfunctions.net/products/`);
         return this.http.get("../assets/json/product.json");
     }
+
 }

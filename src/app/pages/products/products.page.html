@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of products">
+    <ion-item-sliding *ngFor="let item of category">
       <ion-item (click)="onProductClick(item)">
         <ion-button>{{item.name}}</ion-button>
       </ion-item>
