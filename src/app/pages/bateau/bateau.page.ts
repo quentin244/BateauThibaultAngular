@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./bateau.page.scss'],
 })
 export class BateauPage implements OnInit {
-  @Input() bateaux = [{"name":"De la Brise", "id":0},{"name":"Saphir", "id":1},{"name":"Gast Micher", "id":2},{"name":"Aquilon", "id":3}];
+  @Input() bateaux = [{"name":"De la Brise","img": "../assets/deLaBrise_icon.png", "id":0},{"name":"Saphir","img": "../assets/saphir_icon.png", "id":1},{"name":"Gast Micher","img": "../assets/gastMicher_icon.png", "id":2},{"name":"Aquilon","img": "../assets/aquilon_icon.png", "id":3},{"name":"Contact","img": "../assets/poulpe.png", "id":4}];
   
   constructor(private router: Router) { }
 
@@ -16,6 +16,9 @@ export class BateauPage implements OnInit {
 
   onBateauClick(item): void {
     console.log(item);
+    if(item.id == 4){
+      this.router.navigate(['/', 'contact'])
+    }
     this.router.navigate(['/', 'bateau', item.id]);
   }
 }

@@ -4,13 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
+<ion-content  class="bgImage">
+
+  <div id="container">
+
+  <ion-row id="button">
     <ion-item-sliding *ngFor="let item of recettes">
-      <ion-item (click)="onRecetteClick(item)">
-        <ion-button>{{item.name}}</ion-button>
-      </ion-item>
+      <ion-button class="accueilButton" (click)="onRecetteClick(item)">
+          <ion-img src="{{item.img}}" class="imgButton"></ion-img>
+          <ion-text class="txtButton">{{item.name}}</ion-text>
+          <ion-img src="{{item.img}}" class="imgButton"></ion-img>
+      </ion-button>
     </ion-item-sliding>
-  </ion-list>  
+  </ion-row>
+  </div>
 </ion-content>
 
