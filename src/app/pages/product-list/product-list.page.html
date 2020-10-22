@@ -7,7 +7,7 @@
 <ion-content>
   <ion-list>
     <ion-item-sliding *ngFor="let item of products">
-      <div *ngIf="item.category==3">
+      <div *ngIf="this.category==3">
         <div *ngIf="item.discount!=0">
           <ion-item  (click)="onProductClick(item)">
             <ion-button>{{item.name}}</ion-button>
@@ -15,10 +15,10 @@
         </div>
       </div>
       <div *ngIf="item.category==this.category">
-      <ion-item  (click)="onProductClick(item)">
-        <ion-button>{{item.name}}</ion-button>
-      </ion-item>
-    </div>
+        <ion-item  (click)="onProductClick(item)">
+          <ion-button>{{item.name}}</ion-button>
+        </ion-item>
+      </div>
     </ion-item-sliding>
   </ion-list>  
 </ion-content>

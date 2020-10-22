@@ -9,12 +9,11 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./product-list.page.scss'],
 })
 export class ProductListPage implements OnInit {
-  public products;
-  public category;
+  private products;
+  private category;
 
   constructor(
     private productService: ProductService,
-    private router: Router,
     private route: ActivatedRoute
   ) {
   }
@@ -22,7 +21,6 @@ export class ProductListPage implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.category = params['id'];
-      console.log(this.category)
     });
 
     this.productService.getProducts()
