@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GetDataService } from '../../services/getData.service'
 
 @Component({
   selector: 'app-recette',
@@ -7,11 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./recette.page.scss'],
 })
 export class RecettePage implements OnInit {
-  @Input() recettes = [{"name":"Homard","img": "../assets/homard.png", "id":0},{"name":"St Jaques","img": "../assets/saintJacques_icon.png", "id":1},{"name":"Bar","img": "../assets/barRecette_icon.png", "id":2},{"name":"Tourteau","img": "../assets/tourteau.png", "id":3},{"name":"Recette","img": "../assets/poulpe.png", "id":4}];
+  @Input() recettes;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private data: GetDataService) { }
 
   ngOnInit() {
+    this.data.getRecettes().subscribe(
+      (resp)=>{
+        this.recettes = resp;
+      }
+    )
   }
 
   onRecetteClick(item): void {

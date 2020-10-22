@@ -4,12 +4,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
+
+<ion-content  class="bgImage">
+
+  <div class="container">
+
+  <ion-row id="button">
     <ion-item-sliding *ngFor="let item of category">
-      <ion-item (click)="onProductClick(item)">
-        <ion-button>{{item.name}}</ion-button>
-      </ion-item>
+      <ion-button class="accueilButton" (click)="onProductClick(item)">
+          <ion-img src="{{item.img}}" class="imgButton"></ion-img>
+          <ion-text class="txtButton">{{item.name}}</ion-text>
+          <ion-img src="{{item.img}}" class="imgButton"></ion-img>
+      </ion-button>
     </ion-item-sliding>
-  </ion-list>  
+  </ion-row>
+  <ion-text class="myFooter">Powered by BTK Inc.</ion-text>
+  </div>
 </ion-content>

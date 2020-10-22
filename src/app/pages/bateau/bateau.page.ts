@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GetDataService } from '../../services/getData.service'
 
 @Component({
   selector: 'app-bateau',
@@ -7,11 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./bateau.page.scss'],
 })
 export class BateauPage implements OnInit {
-  @Input() bateaux = [{"name":"De la Brise","img": "../assets/deLaBrise_icon.png", "id":0},{"name":"Saphir","img": "../assets/saphir_icon.png", "id":1},{"name":"Gast Micher","img": "../assets/gastMicher_icon.png", "id":2},{"name":"Aquilon","img": "../assets/aquilon_icon.png", "id":3},{"name":"Contact","img": "../assets/poulpe.png", "id":4}];
+  @Input() bateaux;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private data: GetDataService) { }
 
   ngOnInit() {
+    this.data.getBateaux().subscribe(
+      (resp)=>{
+        this.bateaux = resp;
+      }
+    )
   }
 
   onBateauClick(item): void {
