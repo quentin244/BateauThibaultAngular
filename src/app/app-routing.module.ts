@@ -32,12 +32,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recette/recette.module').then( m => m.RecettePageModule)
   },
   {
-    path: 'restaurant',
-    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+    path: 'restaurants',
+    loadChildren: () => import('./pages/restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
   },
   {
     path: 'restaurant/:id',
-    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+    loadChildren: () => import('./pages/restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
   },
   {
     path: 'products',
@@ -47,6 +47,11 @@ const routes: Routes = [
     path: 'products/:id',
     loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
   },
+  {
+    path: 'restaurants',
+    loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
+
 ];
 
 @NgModule({
