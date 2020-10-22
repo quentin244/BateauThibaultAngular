@@ -19,6 +19,4 @@ export class RecettePage implements OnInit {
     this.router.navigate(['/', 'recette', item.id]);
 
   }
-
-
 }

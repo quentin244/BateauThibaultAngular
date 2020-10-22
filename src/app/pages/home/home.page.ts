@@ -13,7 +13,7 @@ export class HomePage {
   ngOnInit() {
   }
 
-  toNavigate(id){
-    this.router.navigate(['/', id]);
+  toNavigate(page){
+    this.router.navigate(['/', page]);
   }
 }

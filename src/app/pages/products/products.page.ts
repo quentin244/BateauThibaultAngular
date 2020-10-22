@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from './../../services/product.service';
+import { GetDataService } from '../../services/getData.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ export class ProductsPage implements OnInit {
   public category = [{"name":"Poisson", "id":0},{"name":"Coquillage", "id":1},{"name":"Crustace", "id":2},{"name":"Promotion", "id":3}];
 
   constructor(
-    private productService: ProductService,
+    private getDataService: GetDataService,
     private router: Router
     ) {
   }
