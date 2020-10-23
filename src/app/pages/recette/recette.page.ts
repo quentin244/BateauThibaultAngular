@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./recette.page.scss'],
 })
 export class RecettePage implements OnInit {
-  @Input() recettes = [{"name":"Homard","img": "../assets/homard.png", "id":0},{"name":"St Jaques","img": "../assets/saintJacques_icon.png", "id":1},{"name":"Bar","img": "../assets/barRecette_icon.png", "id":2},{"name":"Tourteau","img": "../assets/tourteau.png", "id":3},{"name":"Recette","img": "../assets/poulpe.png", "id":4}];
+  @Input() recettes = [{"name":"Homard","img": "../assets/img/homard.png", "id":0},{"name":"St Jaques","img": "../assets/img/saintJacques_icon.png", "id":1},{"name":"Bar","img": "../assets/img/barRecette_icon.png", "id":2},{"name":"Tourteau","img": "../assets/img/tourteau.png", "id":3},{"name":"Recette","img": "../assets/img/poulpe.png", "id":4}];
   
   constructor(private router: Router) { }
 
