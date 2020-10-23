@@ -1,21 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>restaurant</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content  class="bgImage">
-
-  <div id="container">
-
-  <ion-row id="button">
-    <ion-item-sliding *ngFor="let item of restaurants">
-      <ion-button class="accueilButton" (click)="onRestaurantClick(item)">
-          <ion-img src="{{item.img}}" class="imgButton"></ion-img>
-          <ion-text class="txtButton">{{item.name}}</ion-text>
-          <ion-img src="{{item.img}}" class="imgButton"></ion-img>
-      </ion-button>
-    </ion-item-sliding>
-  </ion-row>
+  <ion-title class="namecom">{{item.name}}</ion-title>
+  <img class="descriptionImage" src='../assets/'>
+  <div class="namecom">
+    <p>XXX YYY ZZZ/</p>
+  </div>
+    <p class="aboutus">Qu'il est chaud le soleil<br>
+    Quand nous sommes en vacances<br>
+    Y a d' la joie, des hirondelles<br>
+    C'est le sud de la France<br>
+    Papa bricole au garage<br>
+    Maman lit dans la chaise longue<br>
+    Dans ce joli paysage<br>
+    Moi, je me balade en tongs<br>
+    Que de bonheur!<br>
+    Que de bonheur!</p>
   </div>
 </ion-content>
