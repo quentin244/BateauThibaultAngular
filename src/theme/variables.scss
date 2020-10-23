@@ -76,12 +76,21 @@
   --ion-color-light-tint: #f5f6f9;
 
   .bgImage{
-    --background: url("/assets/background.png") no-repeat center center / cover;
+    --background: url("/assets/img/background.png") no-repeat center center / cover;
   }
 
   .myButton {
     width: 48%;
     margin-left: 5px;
+    height: 90px;
+    --background: black;
+    --opacity: 0.7;
+  }
+
+  .accueilButton{
+    width: 99%;
+    margin-left: 5px;
+    padding-right: 5px;
     height: 90px;
     --background: black;
     --opacity: 0.7;
