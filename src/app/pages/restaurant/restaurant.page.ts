@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { GetDataService } from '../../services/getData.service'
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GetDataService } from 'src/app/services/getData.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -8,23 +8,24 @@ import { GetDataService } from '../../services/getData.service'
   styleUrls: ['./restaurant.page.scss'],
 })
 export class RestaurantPage implements OnInit {
-  @Input() restaurants;
-  
-  constructor(private router: Router, private data: GetDataService) { }
+  public id;
+  public restaurant;
+
+  constructor(private route : ActivatedRoute,
+    private data: GetDataService) { 
+  }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
+
     this.data.getRestaurants().subscribe(
       (resp)=>{
-        this.restaurants = resp;
+        for (let index in resp) {
+          if (resp[index].id == this.id)
+            this.restaurant = resp[index];
+        }
+        });
       }
-    )
   }
-
-  onRestaurantClick(item): void {
-    console.log(item);
-    
-    this.router.navigate(['/', 'restaurant', item.id]);
-  }
-
-
-}

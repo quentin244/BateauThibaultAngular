@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataService } from '../../services/getData.service';
 import { Router } from '@angular/router';
+import { GetDataService } from 'src/app/services/getData.service';
 
 @Component({
   selector: 'app-products',
