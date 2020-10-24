@@ -2,7 +2,7 @@
     {
         "id" : 0,
         "name" : "Bistrot Landais",
-        "image" : "../assets/assets/img/bistrotLandais.png",
+        "image" : "../assets/img/bistrotLandais.png",
         "image_icon" : "../assets/img/bistrotLandais_icon.png",
         "subtitle" : "XXXYYYZZZ",
         "description" : ["Qu'il est chaud le soleil",

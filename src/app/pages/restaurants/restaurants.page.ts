@@ -26,7 +26,7 @@ export class RestaurantPage implements OnInit {
   }
 
   onRestaurantClick(item): void {
-    this.router.navigate(["/", item.id]);
+    this.router.navigate(["/", "restaurant", item.id]);
   }
 
 

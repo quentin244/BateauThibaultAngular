@@ -2,31 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GetDataService } from 'src/app/services/getData.service';
 
-
 @Component({
-  selector: 'app-restaurant',
-  templateUrl: './restaurant.page.html',
-  styleUrls: ['./restaurant.page.scss'],
+  selector: 'app-recette-page',
+  templateUrl: './recette-page.page.html',
+  styleUrls: ['./recette-page.page.scss'],
 })
-export class RestaurantPage implements OnInit {
+export class RecettePagePage implements OnInit {
 
   public id;
   public name;
   public image;
   public subtitle;
-  public description;
+  public description;  
 
   constructor(
     private route : ActivatedRoute,
     private getDataService: GetDataService,
     ) { 
-  }
+  }  
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.id = params['id'];
     });
-    this.getDataService.getRestaurants()
+    this.getDataService.getRecettes()
     .subscribe(
       (resp)=>{
         this.name = resp[this.id].name

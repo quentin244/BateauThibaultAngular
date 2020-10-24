@@ -16,7 +16,7 @@ export class RecettePage implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.getDataService.getRcettes()
+    this.getDataService.getRecettes()
     .subscribe(
       (resp)=>{
         this.recettes = resp
@@ -26,7 +26,7 @@ export class RecettePage implements OnInit {
 
   onRecetteClick(item): void {
     console.log(item);
-    this.router.navigate(['/', 'recette', item.id]);
+    this.router.navigate(['/', 'recette-page', item.id]);
 
   }
 }
