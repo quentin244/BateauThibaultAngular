@@ -75,9 +75,45 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+  .container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .bgImage{
     --background: url("/assets/img/background.png") no-repeat center center / cover;
   }
+
+  .footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .footer_text{
+    text-align: center;
+  }
+
+  .title{
+    font-size: 30px;
+    width: 100%;
+    color: white;
+    font-family: "Noteworthy", "Times New Roman";
+    font-style: italic;
+  }
+  .main{
+    font-size: 15px;
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 80px;
+    font-family: "Noteworthy", "Times New Roman";
+  }
+
 
   .myButton {
     width: 48%;

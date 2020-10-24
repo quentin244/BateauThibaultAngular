@@ -49,7 +49,7 @@ const routes: Routes = [
   },
   {
     path: 'restaurants',
-    loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
   },
   {
     path: 'product-list/:id',
