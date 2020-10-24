@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { GetDataService } from 'src/app/services/getData.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -7,16 +8,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./restaurant.page.scss'],
 })
 export class RestaurantPage implements OnInit {
+  public id;
+  public restaurant;
 
-  public name;
-
-  constructor(private route : ActivatedRoute) { 
+  constructor(private route : ActivatedRoute,
+    private data: GetDataService) { 
   }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.name = params['id'];
+      this.id = params['id'];
     });
-  }
 
-}
+    this.data.getRestaurants().subscribe(
+      (resp)=>{
+        for (let index in resp) {
+          if (resp[index].id == this.id)
+            this.restaurant = resp[index];
+        }
+        });
+      }
+  }

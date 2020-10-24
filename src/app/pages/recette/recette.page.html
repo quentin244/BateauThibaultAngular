@@ -6,7 +6,19 @@
 
 <ion-content  class="bgImage">
 
-  <div id="container">
+  <div class="container">
+
+  <div class="title">
+     <ion-text>Nos recettes</ion-text>
+    </div>
+    <div id="main">
+      <div class="strong">
+       <ion-text>Toutes les recettes du bateau de Thibault.</ion-text>
+      </div>
+      <div class="normalText">
+        <ion-text> 06.63.99.99.78 <br> lebateaudethibault@gmail.com <br> www.facebook.com/lebateaudethibault</ion-text>
+      </div>
+    </div>
 
   <ion-row id="button">
     <ion-item-sliding *ngFor="let item of recettes">
@@ -17,6 +29,7 @@
       </ion-button>
     </ion-item-sliding>
   </ion-row>
+  <ion-text class="myFooter">Powered by BTK Inc.</ion-text>
   </div>
 </ion-content>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GetDataService } from 'src/app/services/getData.service';
 
 @Component({
   selector: 'app-products',
@@ -7,16 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.page.scss'],
 })
 export class ProductsPage implements OnInit {
-  public category = [{"name":"Poisson", "id":0},{"name":"Coquillage", "id":1},{"name":"Crustace", "id":2},{"name":"Promotion", "id":3}];
+  public category;
 
   constructor(
+    private data: GetDataService,
     private router: Router
     ) {
   }
 
 
   ngOnInit() {
-
+    this.data.getCategories().subscribe(
+      (resp)=>{
+        this.category = resp;
+      }
+    )
   }
 
   onProductClick(item): void {

@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: 'restaurant/:id',
-    loadChildren: () => import('./pages/restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
+    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
   },
   {
     path: 'products',
@@ -46,10 +46,6 @@ const routes: Routes = [
   {
     path: 'products/:id',
     loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
-  },
-  {
-    path: 'restaurants',
-    loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
   },
   {
     path: 'product-list/:id',

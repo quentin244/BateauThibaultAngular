@@ -79,12 +79,21 @@
     --background: url("/assets/img/background.png") no-repeat center center / cover;
   }
 
+  .container {
+    text-align: center;
+  
+  }
+
   .myButton {
     width: 48%;
     margin-left: 5px;
     height: 90px;
     --background: black;
     --opacity: 0.7;
+  }
+
+  .myFooter {
+    font-size: 12px;
   }
 
   .accueilButton{
@@ -99,6 +108,23 @@
   .imgButton{
    height: 70%;
    align-items: left;
+  }
+
+  .title{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 25%;
+  }
+  .strong{
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+  }
+  .normalText{
+    font-size: medium;
+    text-align: center;
+    margin-bottom: 20%;
   }
 
   .txtButton{

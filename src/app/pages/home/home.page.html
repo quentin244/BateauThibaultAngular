@@ -13,19 +13,25 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <div class="container">
 
 
-    <div id="title">
-     <strong>Je suis le titre</strong>
+    <div class="title">
+     <ion-text>Le bateau de Thibault</ion-text>
     </div>
     <div id="main">
-     <strong>Je suis le contenu</strong>
+      <div class="strong">
+       <ion-text>Vente en direct de notre bateau <br> Produits selon la saison, Livraisons sur Paris</ion-text>
+      </div>
+      <div class="normalText">
+        <ion-text> 06.63.99.99.78 <br> lebateaudethibault@gmail.com <br> www.facebook.com/lebateaudethibault</ion-text>
+      </div>
     </div>
       <div id="button">
         <ion-button id="productButton" expand="block" (click)="toNavigate('products')">
           <ion-img src="../assets/img/poisson.png" class="imgButton"></ion-img>
           <ion-text class="txtButton">Produits et promotions</ion-text>
+          <ion-img src="../assets/img/poisson.png" class="imgButton"></ion-img>
         </ion-button>   
       </div>
       <ion-row id="button">
@@ -48,5 +54,6 @@
           <ion-text class="txtButton">Contact</ion-text>
         </ion-button>
       </ion-row>
+      <ion-text class="myFooter">Powered by BTK Inc.</ion-text>
     </div>
 </ion-content>

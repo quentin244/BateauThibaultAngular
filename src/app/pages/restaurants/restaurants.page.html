@@ -1,15 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>restaurant</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="container">
 
-<ion-content>
-  <ion-list>
-    <ion-item-sliding *ngFor="let item of restaurants">
-      <ion-item (click)="onRestaurantClick(item)">
-        <ion-button >{{item.name}}</ion-button>
-      </ion-item>
-    </ion-item-sliding>
-  </ion-list>  
-</ion-content>
+  <div class="title">
+       <ion-text>Restaurants partenaires</ion-text>
+      </div>
+      <div id="main">
+        <div class="strong">
+         <ion-text>Tous les restaurants partenaires avec le bateau de Thibault.</ion-text>
+        </div>
+        <div class="normalText">
+          <ion-text> 06.63.99.99.78 <br> lebateaudethibault@gmail.com <br> www.facebook.com/lebateaudethibault</ion-text>
+        </div>
+      </div>
+  
+    <ion-row id="button">
+      <ion-item-sliding *ngFor="let item of restaurants">
+        <ion-button class="accueilButton" (click)="onRestaurantClick(item)">
+            <ion-img src="{{item.image_icon}}" class="imgButton"></ion-img>
+            <ion-text class="txtButton">{{item.name}}</ion-text>
+            <ion-img src="{{item.image_icon}}" class="imgButton"></ion-img>
+        </ion-button>
+      </ion-item-sliding>
+    </ion-row>
+    <ion-text class="myFooter">Powered by BTK Inc.</ion-text>
