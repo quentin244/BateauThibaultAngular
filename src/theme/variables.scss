@@ -75,9 +75,96 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
+  .container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .container_static {
+    width: 100%;
+    text-align: center;
+  }
+
   .bgImage{
     --background: url("/assets/img/background.png") no-repeat center center / cover;
   }
+
+  .footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .footer_text{
+    text-align: center;
+  }
+
+  .title{
+    font-size: 30px;
+    width: 100%;
+    color: white;
+    font-family: "Noteworthy", "Times New Roman";
+    font-style: italic;
+  }
+
+  .title_product{
+    font-size: 20px;
+    width: 100%;
+    font-family: "Noteworthy", "Times New Roman";
+    font-style: bold;
+  }
+
+  .title_static{
+    font-size: 30px;
+    width: 100%;
+    color: white;
+    font-family: "Noteworthy", "Times New Roman";
+    font-style: italic;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .image_static{
+    vertical-align: center;
+    margin-right: 0;
+    margin-left: 20%;
+    width: 60%;
+  }
+
+  .description_static{
+    align-items: center;
+    width: 40%;
+    font-family: "Noteworthy", "Times New Roman";
+    font-size: 14px;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+
+  .description_recette{
+    align-items: center;
+    width: 100%;
+    font-family: "Noteworthy", "Times New Roman";
+    font-size: 14px;
+    margin-top: 10%;
+  }
+
+  .font_text{
+    font-family: "Noteworthy", "Times New Roman";
+    font-size: 15px;
+  }
+  .main{
+    font-size: 15px;
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 80px;
+    font-family: "Noteworthy", "Times New Roman";
+  }
+
 
   .myButton {
     width: 48%;
@@ -103,6 +190,26 @@
 
   .txtButton{
     font-size: 90%;
+  }
+  .priceButton{
+    margin-left: 20%;
+    font-size: 90%;
+  }
+
+  .header{
+    width: 100%;
+    height: 40px;
+    background-color: #000000;
+  }
+
+  .headerLogo{
+    height: 100%;
+    width: 20%;
+  }
+
+  .headerImg{
+    width: 60%;
+    height: 100%;
   }
 }
 

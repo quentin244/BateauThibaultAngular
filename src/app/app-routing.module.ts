@@ -20,16 +20,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/bateau/bateau.module').then( m => m.BateauPageModule)
   },
   {
-  path: 'bateau/:id',
-  loadChildren: () => import('./pages/bateau/bateau.module').then( m => m.BateauPageModule)
+    path: 'bateau-page/:id',
+    loadChildren: () => import('./pages/bateau-page/bateau-page.module').then( m => m.BateauPagePageModule)
   },
   {
     path: 'recette',
     loadChildren: () => import('./pages/recette/recette.module').then( m => m.RecettePageModule)
   },
   {
-    path: 'recette/:id',
-    loadChildren: () => import('./pages/recette/recette.module').then( m => m.RecettePageModule)
+    path: 'recette-page/:id',
+    loadChildren: () => import('./recette-page/recette-page.module').then( m => m.RecettePagePageModule)
   },
   {
     path: 'restaurants',
@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: 'restaurant/:id',
-    loadChildren: () => import('./pages/restaurants/restaurants.module').then( m => m.RestaurantsPageModule)
+    loadChildren: () => import('./pages/restaurant/restaurant.module').then( m => m.RestaurantPageModule)
   },
   {
     path: 'products',
@@ -48,13 +48,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
   },
   {
-    path: 'restaurants',
-    loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
-  },
-  {
     path: 'product-list/:id',
     loadChildren: () => import('./pages/product-list/product-list.module').then( m => m.ProductListPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./pages/bateau/cart/cart.module').then( m => m.CartPageModule)
+  },
+
+
 ];
 
 @NgModule({

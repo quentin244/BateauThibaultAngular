@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
+import { GetDataService } from 'src/app/services/getData.service';
+
 
 @Component({
   selector: 'app-restaurants',
@@ -7,15 +9,24 @@ import { Router } from '@angular/router'
   styleUrls: ['./restaurants.page.scss'],
 })
 export class RestaurantPage implements OnInit {
-  @Input() restaurants = [{"name":"Bistrot des Gascons","id":0 },{"name":"Les fous de l'ile","id":1},{"name":"Bistrot Landais","id":2},{"name":"Villa 9-Trois","id":3},{"name":"Bistrot du Sommelier", "id":4}];
+  private restaurants;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private getDataService: GetDataService,
+    ) {}
 
   ngOnInit() {
+    this.getDataService.getRestaurants()
+    .subscribe(
+      (resp)=>{
+        this.restaurants = resp
+      }
+    );
   }
 
   onRestaurantClick(item): void {
-    this.router.navigate(["/", item.id]);
+    this.router.navigate(["/", "restaurant", item.id]);
   }
 
 

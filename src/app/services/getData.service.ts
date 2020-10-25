@@ -13,7 +13,7 @@ export class GetDataService {
         return this.http.get("../assets/json/products.json");
     }
 
-    getRcettes() {
+    getRecettes() {
       return this.http.get("../assets/json/recettes.json");
     }
     getBateaux() {
@@ -23,6 +23,6 @@ export class GetDataService {
       return this.http.get("../assets/json/restaurants.json");
     }
     getCategories() {
-      return this.http.get("../assets/json/restaurants.json");
+      return this.http.get("../assets/json/categories.json");
     }
 }

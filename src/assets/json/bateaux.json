@@ -70,5 +70,10 @@
         "",
         "Que de bonheur!",
         "Que de bonheur!"]
+    },
+    {
+        "id" : 4,
+        "name" : "Contact",
+        "image_icon" : "../assets/img/ancre.png"
     }
 ]
