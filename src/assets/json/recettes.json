@@ -1,7 +1,7 @@
 [
     {
         "id" : 0,
-        "name" : "Bar roti a laurier frais",
+        "name" : "Bar rôti au laurier frais",
         "name_short" : "Bar",
         "image" : "../assets/img/barRecette.png",
         "image_icon" : "../assets/img/barRecette_icon.png",
@@ -43,7 +43,6 @@
         "Maman lit dans la chaise longue",
         "Dans ce joli paysage",
         "Moi, je me balade en tongs",
-        "",
         "Que de bonheur!",
         "Que de bonheur!"]
         },

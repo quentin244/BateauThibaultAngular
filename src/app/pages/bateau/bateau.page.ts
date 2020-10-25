@@ -26,7 +26,12 @@ export class BateauPage implements OnInit {
   }
 
   onBateauClick(item): void {
-    
-    this.router.navigate(['/', 'bateau-page', item.id]);
+    if(item.id == 4){
+      console.log(item.id)
+      this.router.navigate(['/', 'contact']);
+    }
+    else{
+      this.router.navigate(['/', 'bateau-page', item.id]);
+    }
   }
 }
