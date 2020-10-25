@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GetDataService } from 'src/app/services/getData.service';
-import { Storage } from '@ionic/storage'; 
 
 @Component({
   selector: 'app-product-list',
@@ -12,12 +11,12 @@ export class ProductListPage implements OnInit {
   private products;
   private category;
   public ok = false;
+  public productCartExist = false;
 
   constructor(
     private getDataService: GetDataService,
     private route: ActivatedRoute,
     private router: Router,
-    private storage: Storage
   ) {
   }
 
@@ -35,14 +34,23 @@ export class ProductListPage implements OnInit {
   }
 
   addCart(item): void {
-    console.log("vous avez ajouter un " + item);
-    if (this.ok == true){
-      this.ok = false;
+    this.productCartExist = false
+    console.log("vous avez ajouter un " + item.name);
+    if(this.productInCart(item.name)){
+      localStorage.removeItem(item.name)
     }
     else{
-      this.ok = true;
+      localStorage.setItem(item.name, JSON.stringify(item));
     }
-    this.storage.set(item.name, item);
+  }
+
+  productInCart(name){
+    for (let i=0;i<localStorage.length;i++){
+      if(localStorage.key(i)==name){
+        return true
+      }
+    }
+    return false
   }
 
   toNavigateHome(){

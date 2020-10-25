@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'recette-page/:id',
-    loadChildren: () => import('./recette-page/recette-page.module').then( m => m.RecettePagePageModule)
+    loadChildren: () => import('./pages/recette-page/recette-page.module').then( m => m.RecettePagePageModule)
   },
   {
     path: 'restaurants',
@@ -53,7 +53,7 @@ const routes: Routes = [
   },
   {
     path: 'cart',
-    loadChildren: () => import('./pages/bateau/cart/cart.module').then( m => m.CartPageModule)
+    loadChildren: () => import('./pages/cart/cart.module').then( m => m.CartPageModule)
   },
 
 

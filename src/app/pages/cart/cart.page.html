@@ -11,11 +11,14 @@
             <ion-text>Modifiez la quantité en tappant sur chaque produit</ion-text>
         </div>
   <ion-row id="button">
-    <ion-item-sliding *ngFor="let item of category">
+    <ion-item-sliding *ngFor="let item of cart">
       <ion-button class="accueilButton" (click)="onProductClick(item)">
-          <ion-img src="{{item.image_icon}}" class="imgButton"></ion-img>
-          <ion-text class="txtButton">{{item.name}}</ion-text>
-          <ion-img src="{{item.image_icon}}" class="imgButton"></ion-img>
+        <ion-img src="../assets/img/poulpe.png" class="imgButton"></ion-img>
+        <ion-text class="txtButton">{{item[0].name}}</ion-text>
+        <div class="priceButton">
+          <ion-text>{{item[1]}} * {{item[0].price}} € </ion-text>
+          <ion-text>{{item[0].price * item[1]}} €</ion-text>
+        </div>
       </ion-button>
     </ion-item-sliding>
   </ion-row>

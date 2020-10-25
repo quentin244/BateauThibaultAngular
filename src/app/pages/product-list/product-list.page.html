@@ -26,7 +26,7 @@
             <ion-img src="../assets/img/poulpe.png" class="imgButton"></ion-img>
             <ion-text class="txtButton">{{item.name}}</ion-text>
             <div class="priceButton">
-              <ion-text *ngIf="this.ok">OK </ion-text>
+              <ion-text *ngIf="this.productInCart(item.name)">OK </ion-text>
               <ion-text>{{item.price}} €</ion-text>
             </div>
           </ion-button>
