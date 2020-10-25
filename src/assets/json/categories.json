@@ -1,6 +1,22 @@
 [
-    {"name":"Poisson", "id":0},
-    {"name":"Coquillage", "id":1},
-    {"name":"Crustace", "id":2},
-    {"name":"Promotion", "id":3}
+    {
+        "id" : 0,
+        "name" : "Poissons",
+        "image_icon" : "../assets/img/poulpe.png"
+    },
+    {
+        "id" : 1,
+        "name" : "Coquillages",
+        "image_icon" : "../assets/img/poulpe.png"
+    },
+    {
+        "id" : 2,
+        "name" : "Crustacés",
+        "image_icon" : "../assets/img/poulpe.png"
+    },
+    {
+        "id" : 3,
+        "name" : "Promotions",
+        "image_icon" : "../assets/img/poulpe.png"
+    }
 ]

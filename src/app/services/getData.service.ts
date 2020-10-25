@@ -23,6 +23,6 @@ export class GetDataService {
       return this.http.get("../assets/json/restaurants.json");
     }
     getCategories() {
-      return this.http.get("../assets/json/restaurants.json");
+      return this.http.get("../assets/json/categories.json");
     }
 }

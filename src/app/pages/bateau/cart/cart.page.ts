@@ -1,32 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetDataService } from 'src/app/services/getData.service';
+import { Storage } from '@ionic/storage'; 
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.page.html',
-  styleUrls: ['./products.page.scss'],
+  selector: 'app-cart',
+  templateUrl: './cart.page.html',
+  styleUrls: ['./cart.page.scss'],
 })
-export class ProductsPage implements OnInit {
-  public category;
+export class CartPage implements OnInit {
+
+  public cart;
 
   constructor(
     private router: Router,
     private getDataService: GetDataService,
+    private storage: Storage,
     ) {  }
 
   ngOnInit() {
     this.getDataService.getCategories()
     .subscribe(
       (resp)=>{
-        this.category = resp
+        this.cart = resp
       }
     );
   }
 
   onProductClick(item): void {
     console.log(item);
-    this.router.navigate(['/', 'product-list', item.id]);
   }
 
   toNavigateHome(){
@@ -35,4 +37,5 @@ export class ProductsPage implements OnInit {
   toNavigateCart(){
     this.router.navigate(['/', 'cart']);
   }
+
 }

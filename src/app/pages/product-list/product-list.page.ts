@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { GetDataService } from 'src/app/services/getData.service';
+import { Storage } from '@ionic/storage'; 
 
 @Component({
   selector: 'app-product-list',
@@ -10,10 +11,13 @@ import { GetDataService } from 'src/app/services/getData.service';
 export class ProductListPage implements OnInit {
   private products;
   private category;
+  public ok = false;
 
   constructor(
     private getDataService: GetDataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
+    private storage: Storage
   ) {
   }
 
@@ -28,5 +32,23 @@ export class ProductListPage implements OnInit {
         this.products = resp
       }
     );
+  }
+
+  addCart(item): void {
+    console.log("vous avez ajouter un " + item);
+    if (this.ok == true){
+      this.ok = false;
+    }
+    else{
+      this.ok = true;
+    }
+    this.storage.set(item.name, item);
+  }
+
+  toNavigateHome(){
+    this.router.navigate(['/', 'home']);
+  }
+  toNavigateCart(){
+    this.router.navigate(['/', 'cart']);
   }
 }
