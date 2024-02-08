@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  styleUrls: ['home.page.scss']
 })
 export class HomePage {
-
   constructor(private router: Router) {}
 
-  ngOnInit() {
-  }
-
-  toNavigate(page){
+  toNavigate(page: string) {
     this.router.navigate(['/', page]);
   }
 }

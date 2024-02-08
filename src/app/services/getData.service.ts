@@ -1,28 +1,35 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '../dto/Product';
+import { Recipe } from '../dto/Recipe';
+import { Boat } from '../dto/Boat';
+import { Restaurant } from '../dto/Restaurant';
+import { Category } from '../dto/Category';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetDataService {
+  constructor(private http: HttpClient) {}
 
-    constructor(private http: HttpClient) { }
-     
-    getProducts() {
-        //return this.http.get(`https://us-central1-projetbateau-d52df.cloudfunctions.net/products/`);
-        return this.http.get("../assets/json/products.json");
-    }
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('../assets/json/products.json');
+  }
 
-    getRecettes() {
-      return this.http.get("../assets/json/recettes.json");
-    }
-    getBateaux() {
-      return this.http.get("../assets/json/bateaux.json");
-    }
-    getRestaurants() {
-      return this.http.get("../assets/json/restaurants.json");
-    }
-    getCategories() {
-      return this.http.get("../assets/json/categories.json");
-    }
+  getRecettes(): Observable<Recipe[]> {
+    return this.http.get<Recipe[]>('../assets/json/recettes.json');
+  }
+
+  getBateaux(): Observable<Boat[]> {
+    return this.http.get<Boat[]>('../assets/json/bateaux.json');
+  }
+
+  getRestaurants(): Observable<Restaurant[]> {
+    return this.http.get<Restaurant[]>('../assets/json/restaurants.json');
+  }
+
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>('../assets/json/categories.json');
+  }
 }

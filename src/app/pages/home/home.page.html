@@ -1,50 +1,57 @@
-
-  <ion-content  class="bgImage">
-
-    <div class="container">
-
-
-        <div class="title">
-            <ion-text>Le bateau de Thibault</ion-text>
-        </div>
-        <div class="main">
-          <ion-text><strong>Vente en direct de notre bateau <br/>
-                Produits selon la saison, Livraisons sur Paris<br/></strong></ion-text>
-          <ion-text>06.63.99.99.78 <br/>
-          lebateaudethibault@gmail.com <br/>
-          www.facebook.com/lebateaudethibault</ion-text>
-        </div>
-        <div class="button_div">
-          <ion-button class="accueilButton" (click)="toNavigate('products')">
-            <ion-img src="../assets/img/poisson.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">Produits et promotions</ion-text>
-            <ion-img src="../assets/img/poisson.png" class="imgButton"></ion-img>
-          </ion-button>   
-          <ion-button class="accueilButton" (click)="toNavigate('bateau')">
-            <ion-img src="../assets/img/ancre.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">Bateaux</ion-text>
-            <ion-img src="../assets/img/ancre.png" class="imgButton"></ion-img>
-          </ion-button>
-          <ion-button class="accueilButton" (click)="toNavigate('restaurants')">
-            <ion-img src="../assets/img/restaurant.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">Restaurants</ion-text>
-            <ion-img src="../assets/img/restaurant.png" class="imgButton"></ion-img>
-          </ion-button>
-          <ion-button class="accueilButton" (click)="toNavigate('recette')">
-            <ion-img src="../assets/img/recette.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">Recettes</ion-text>
-            <ion-img src="../assets/img/recette.png" class="imgButton"></ion-img>
-          </ion-button>
-          <ion-button class="accueilButton" (click)="toNavigate('contact')">
-            <ion-img src="../assets/img/poulpe.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">Contact</ion-text>
-            <ion-img src="../assets/img/poulpe.png" class="imgButton"></ion-img>
-          </ion-button>
-        </div>
-      </div>
-  </ion-content>
-  <div class="footer">
-        <div class="footer_text">
-          <ion-text>Powered by BTK Inc</ion-text>
-        </div>
+<ion-content class="bg-image">
+  <div class="container">
+    <div class="title">
+      <ion-text>Le bateau de Thibault</ion-text>
+    </div>
+    <div class="main">
+      <ion-text
+        ><strong
+          >Vente en direct de notre bateau <br />
+          Produits selon la saison, Livraisons sur Paris<br /></strong
+      ></ion-text>
+      <ion-text
+        >06.63.99.99.78 <br />
+        lebateaudethibault@gmail.com <br />
+        www.facebook.com/lebateaudethibault
+      </ion-text>
+    </div>
+    <div class="button_div">
+      <ion-button (click)="toNavigate('products')" class="accueil-button">
+        <ion-img class="img-button" src="../assets/img/poisson.png"></ion-img>
+        <ion-text class="txt-button">Produits et promotions</ion-text>
+        <ion-img class="img-button" src="../assets/img/poisson.png"></ion-img>
+      </ion-button>
+      <ion-button (click)="toNavigate('bateau')" class="accueil-button">
+        <ion-img class="img-button" src="../assets/img/ancre.png"></ion-img>
+        <ion-text class="txt-button">Bateaux</ion-text>
+        <ion-img class="img-button" src="../assets/img/ancre.png"></ion-img>
+      </ion-button>
+      <ion-button (click)="toNavigate('restaurants')" class="accueil-button">
+        <ion-img
+          class="img-button"
+          src="../assets/img/restaurant.png"
+        ></ion-img>
+        <ion-text class="txt-button">Restaurants</ion-text>
+        <ion-img
+          class="img-button"
+          src="../assets/img/restaurant.png"
+        ></ion-img>
+      </ion-button>
+      <ion-button (click)="toNavigate('recette')" class="accueil-button">
+        <ion-img class="img-button" src="../assets/img/recette.png"></ion-img>
+        <ion-text class="txt-button">Recettes</ion-text>
+        <ion-img class="img-button" src="../assets/img/recette.png"></ion-img>
+      </ion-button>
+      <ion-button (click)="toNavigate('contact')" class="accueil-button">
+        <ion-img class="img-button" src="../assets/img/poulpe.png"></ion-img>
+        <ion-text class="txt-button">Contact</ion-text>
+        <ion-img class="img-button" src="../assets/img/poulpe.png"></ion-img>
+      </ion-button>
+    </div>
   </div>
+</ion-content>
+<div class="footer">
+  <div class="footer-text">
+    <ion-text>Powered by BTK Inc</ion-text>
+  </div>
+</div>
