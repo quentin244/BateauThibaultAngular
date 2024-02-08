@@ -9,12 +9,7 @@ import { BateauPageRoutingModule } from './bateau-routing.module';
 import { BateauPage } from './bateau.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    BateauPageRoutingModule
-  ],
+  imports: [CommonModule, FormsModule, IonicModule, BateauPageRoutingModule],
   declarations: [BateauPage]
 })
 export class BateauPageModule {}

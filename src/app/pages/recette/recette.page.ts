@@ -1,32 +1,28 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetDataService } from 'src/app/services/getData.service';
-
+import { Recipe } from '../../dto/Recipe';
 
 @Component({
   selector: 'app-recette',
   templateUrl: './recette.page.html',
-  styleUrls: ['./recette.page.scss'],
+  styleUrls: ['./recette.page.scss']
 })
 export class RecettePage implements OnInit {
-  private recettes;  
+  protected recettes: Recipe[];
+
   constructor(
     private router: Router,
-    private getDataService: GetDataService,
-    ) { }
+    private getDataService: GetDataService
+  ) {}
 
   ngOnInit() {
-    this.getDataService.getRecettes()
-    .subscribe(
-      (resp)=>{
-        this.recettes = resp
-      }
-    );
+    this.getDataService.getRecettes().subscribe((resp) => {
+      this.recettes = resp;
+    });
   }
 
-  onRecetteClick(item): void {
-    console.log(item);
+  onRecetteClick(item: Recipe): void {
     this.router.navigate(['/', 'recette-page', item.id]);
-
   }
 }

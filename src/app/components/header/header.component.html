@@ -1,8 +1,15 @@
 <div>
   <ion-row class="header">
-    <ion-img src="../assets/img/homeLogo.png" class="headerLogo" (click)="toNavigateHome()"></ion-img>
-    <ion-img src="../assets/img/navbarbg.png" class="headerImg"></ion-img>
-    <ion-img src="../assets/img/cartLogo.png" class="headerLogo" (click)="toNavigateCart()"></ion-img>
+    <ion-img
+      (click)="toNavigate('home')"
+      class="header-logo"
+      src="../assets/img/homeLogo.png"
+    ></ion-img>
+    <ion-img class="header-img" src="../assets/img/navbarbg.png"></ion-img>
+    <ion-img
+      (click)="toNavigate('cart')"
+      class="header-logo"
+      src="../assets/img/cartLogo.png"
+    ></ion-img>
   </ion-row>
 </div>
-

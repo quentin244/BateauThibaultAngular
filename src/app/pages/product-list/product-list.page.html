@@ -1,33 +1,47 @@
-<ion-content class="bgImage">
+<ion-content class="bg-image">
   <div>
     <ion-row class="header">
-      <ion-img src="../assets/img/homeLogo.png" class="headerLogo" (click)="toNavigateHome()"></ion-img>
-      <ion-img src="../assets/img/navbarbg.png" class="headerImg"></ion-img>
-      <ion-img src="../assets/img/cartLogo.png" class="headerLogo" (click)="toNavigateCart()"></ion-img>
+      <ion-img
+        (click)="toNavigateHome()"
+        class="header-logo"
+        src="../assets/img/homeLogo.png"
+      ></ion-img>
+      <ion-img class="header-img" src="../assets/img/navbarbg.png"></ion-img>
+      <ion-img
+        (click)="toNavigateCart()"
+        class="header-logo"
+        src="../assets/img/cartLogo.png"
+      ></ion-img>
     </ion-row>
-  </div>  
+  </div>
   <div class="container">
-    <div class="title_product">
-            <ion-text>Choisissez vos produits</ion-text>
-        </div>
+    <div class="title-product">
+      <ion-text>Choisissez vos produits</ion-text>
+    </div>
     <ion-row id="button">
       <ion-item-sliding *ngFor="let item of products">
-        <div *ngIf="this.category==3">
-          <div *ngIf="item.discount!=0">
-          <ion-button class="accueilButton" (click)="addCart(item)">
-            <ion-img src="../assets/img/poulpe.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">{{item.name}}</ion-text>
-            <ion-text class="priceButton">{{item.price}} €</ion-text>
-          </ion-button>
+        <div *ngIf="this.category === 3">
+          <div *ngIf="item.discount !== 0">
+            <ion-button (click)="addCart(item)" class="accueil-button">
+              <ion-img
+                class="img-button"
+                src="../assets/img/poulpe.png"
+              ></ion-img>
+              <ion-text class="txt-button">{{ item.name }}</ion-text>
+              <ion-text class="price-button">{{ item.price }} €</ion-text>
+            </ion-button>
           </div>
         </div>
-        <div *ngIf="item.category==this.category">
-          <ion-button class="accueilButton" (click)="addCart(item)">
-            <ion-img src="../assets/img/poulpe.png" class="imgButton"></ion-img>
-            <ion-text class="txtButton">{{item.name}}</ion-text>
-            <div class="priceButton">
-              <ion-text *ngIf="this.productInCart(item.name)">OK </ion-text>
-              <ion-text>{{item.price}} €</ion-text>
+        <div *ngIf="item.category===this.category">
+          <ion-button (click)="addCart(item)" class="accueil-button">
+            <ion-img
+              class="img-button"
+              src="../assets/img/poulpe.png"
+            ></ion-img>
+            <ion-text class="txt-button">{{ item.name }}</ion-text>
+            <div class="price-button">
+              <ion-text *ngIf="this.productInCart(item.name)">OK</ion-text>
+              <ion-text>{{ item.price }} €</ion-text>
             </div>
           </ion-button>
         </div>
@@ -36,7 +50,7 @@
   </div>
 </ion-content>
 <div class="footer">
-        <div class="footer_text">
-          <ion-text>Powered by BTK Inc</ion-text>
-        </div>
+  <div class="footer-text">
+    <ion-text>Powered by BTK Inc</ion-text>
   </div>
+</div>

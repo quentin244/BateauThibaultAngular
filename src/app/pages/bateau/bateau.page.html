@@ -1,29 +1,31 @@
-<ion-content  class="bgImage">
-
+<ion-content class="bg-image">
   <div class="container">
-
-      <div class="title">
-            <ion-text>Nos bateaux partenaires</ion-text>
-        </div>
-        <div class="main">
-          <ion-text><strong>Toutes les eaux mènent à Thibault<br/></strong></ion-text>
-          <ion-text>06.63.99.99.78 <br/>
-          lebateaudethibault@gmail.com <br/>
-          www.facebook.com/lebateaudethibault</ion-text>
-      </div>
-  <ion-row id="button">
-    <ion-item-sliding *ngFor="let item of bateaux">
-      <ion-button class="accueilButton" (click)="onBateauClick(item)">
-          <ion-img src="{{item.image_icon}}" class="imgButton"></ion-img>
-          <ion-text class="txtButton">{{item.name}}</ion-text>
-          <ion-img src="{{item.image_icon}}" class="imgButton"></ion-img>
-      </ion-button>
-    </ion-item-sliding>
-  </ion-row>
+    <div class="title">
+      <ion-text>Nos bateaux partenaires</ion-text>
+    </div>
+    <div class="main">
+      <ion-text
+        ><strong>Toutes les eaux mènent à Thibault<br /></strong
+      ></ion-text>
+      <ion-text
+        >06.63.99.99.78 <br />
+        lebateaudethibault@gmail.com <br />
+        www.facebook.com/lebateaudethibault
+      </ion-text>
+    </div>
+    <ion-row id="button">
+      <ion-item-sliding *ngFor="let item of bateaux">
+        <ion-button (click)="onBateauClick(item)" class="accueil-button">
+          <ion-img class="img-button" src="{{item.image_icon}}"></ion-img>
+          <ion-text class="txt-button">{{ item.name }}</ion-text>
+          <ion-img class="img-button" src="{{item.image_icon}}"></ion-img>
+        </ion-button>
+      </ion-item-sliding>
+    </ion-row>
   </div>
 </ion-content>
 <div class="footer">
-        <div class="footer_text">
-          <ion-text>Powered by BTK Inc</ion-text>
-        </div>
+  <div class="footer-text">
+    <ion-text>Powered by BTK Inc</ion-text>
   </div>
+</div>
